@@ -1,4 +1,5 @@
-USE [MingsEvents]
+DROP DATABASE IF EXISTS database_CULTURA_BCN;
+create database database_CULTURA_BCN;
 GO
 /****** Object:  Table [dbo].[Armchair]    Script Date: 30/04/2025 19:02:22 ******/
 SET ANSI_NULLS ON
