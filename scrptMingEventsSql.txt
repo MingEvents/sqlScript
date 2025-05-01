@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS database_CULTURA_BCN;
 create database database_CULTURA_BCN;
 use database_CULTURA_BCN
 create table Establecimiento(
