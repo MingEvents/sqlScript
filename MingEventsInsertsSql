@@ -1,1 +1,74 @@
 
+INSERT INTO City ([name]) VALUES ('Paris');
+INSERT INTO City ([name]) VALUES ('London');
+INSERT INTO City ([name]) VALUES ('Rome');
+INSERT INTO City ([name]) VALUES ('Tokyo'); 
+
+
+INSERT INTO Role ([name]) VALUES ('Admin');
+INSERT INTO Role ([name]) VALUES ('User');
+INSERT INTO Role ([name]) VALUES ('Manager');
+INSERT INTO Role ([name]) VALUES ('Staff');
+
+
+INSERT INTO Users ([name], [second_name], [phone], [password], [photo], [email], [role_id])
+VALUES ('John', 'Doe', 123456789, 'pass123', NULL, 'john@example.com', 1);
+
+INSERT INTO Users ([name], [second_name], [phone], [password], [photo], [email], [role_id])
+VALUES ('Anna', 'Smith', 234567890, 'qwerty', NULL, 'anna@example.com', 2);
+
+INSERT INTO Users ([name], [second_name], [phone], [password], [photo], [email], [role_id])
+VALUES ('Mike', 'Lee', 345678901, 'abc123', NULL, 'mike@example.com', 3);
+
+INSERT INTO Users ([name], [second_name], [phone], [password], [photo], [email], [role_id])
+VALUES ('Sara', 'Kim', 456789012, 'xyz456', NULL, 'sara@example.com', 2);
+
+
+INSERT INTO Establishment ([name], [direction], [capacity], [city_id])
+VALUES ('Cinema A', '123 Main St', 100, 1);
+
+INSERT INTO Establishment ([name], [direction], [capacity], [city_id])
+VALUES ('Theater B', '456 Oak Rd', 200, 2);
+
+INSERT INTO Establishment ([name], [direction], [capacity], [city_id])
+VALUES ('Stadium C', '789 Elm St', 500, 3);
+
+INSERT INTO Establishment ([name], [direction], [capacity], [city_id])
+VALUES ('Hall D', '101 Pine Ave', 150, 4);
+
+
+INSERT INTO Armchair ([columns], [rows], [user_id], [establish_id]) VALUES (1, 1, 1, 1);
+INSERT INTO Armchair ([columns], [rows], [user_id], [establish_id]) VALUES (2, 1, 2, 1);
+INSERT INTO Armchair ([columns], [rows], [user_id], [establish_id]) VALUES (1, 2, 3, 2);
+INSERT INTO Armchair ([columns], [rows], [user_id], [establish_id]) VALUES (2, 2, NULL, 3);
+
+
+INSERT INTO Chat ([send_date], [user1_id], [user2_id]) VALUES ('2025-05-01', 1, 2);
+INSERT INTO Chat ([send_date], [user1_id], [user2_id]) VALUES ('2025-05-01', 2, 3);
+INSERT INTO Chat ([send_date], [user1_id], [user2_id]) VALUES ('2025-05-02', 3, 4);
+INSERT INTO Chat ([send_date], [user1_id], [user2_id]) VALUES ('2025-05-02', 1, 4);
+
+
+INSERT INTO Event ([name], [price], [reserved_places], [photo], [start_date], [end_date], [seating], [descripcion], [establish_id])
+VALUES ('Concert A', 50, 10, NULL, '2025-05-10', '2025-05-11', 1, 'Great music', 1);
+
+INSERT INTO Event ([name], [price], [reserved_places], [photo], [start_date], [end_date], [seating], [descripcion], [establish_id])
+VALUES ('Play B', 30, 20, NULL, '2025-06-01', '2025-06-02', 1, 'Dramatic play', 2);
+
+INSERT INTO Event ([name], [price], [reserved_places], [photo], [start_date], [end_date], [seating], [descripcion], [establish_id])
+VALUES ('Match C', 100, 50, NULL, '2025-07-15', '2025-07-15', 0, 'Football match', 3);
+
+INSERT INTO Event ([name], [price], [reserved_places], [photo], [start_date], [end_date], [seating], [descripcion], [establish_id])
+VALUES ('Talk D', 0, 30, NULL, '2025-08-20', '2025-08-20', 1, 'Tech talk', 4);
+
+
+INSERT INTO Message ([sender_id], [content], [send_at], [is_read], [chat_id]) VALUES (1, 'Hi!', '2025-05-01 10:00', 0, 1);
+INSERT INTO Message ([sender_id], [content], [send_at], [is_read], [chat_id]) VALUES (2, 'Hello!', '2025-05-01 10:01', 1, 1);
+INSERT INTO Message ([sender_id], [content], [send_at], [is_read], [chat_id]) VALUES (3, 'How are you?', '2025-05-02 09:00', 0, 2);
+INSERT INTO Message ([sender_id], [content], [send_at], [is_read], [chat_id]) VALUES (4, 'Good morning!', '2025-05-02 09:05', 0, 3);
+
+
+INSERT INTO Reserve_Ticket ([armchair_id], [user_id]) VALUES (1, 1);
+INSERT INTO Reserve_Ticket ([armchair_id], [user_id]) VALUES (2, 2);
+INSERT INTO Reserve_Ticket ([armchair_id], [user_id]) VALUES (3, 3);
+INSERT INTO Reserve_Ticket ([armchair_id], [user_id]) VALUES (4, 4);
