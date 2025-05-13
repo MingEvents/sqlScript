@@ -5,11 +5,9 @@ INSERT INTO City ([name]) VALUES ('Rome');
 INSERT INTO City ([name]) VALUES ('Tokyo'); 
 
 
-INSERT INTO Role ([name]) VALUES ('Admin');
-INSERT INTO Role ([name]) VALUES ('User');
-INSERT INTO Role ([name]) VALUES ('Manager');
-INSERT INTO Role ([name]) VALUES ('Staff');
-
+insert Role(name) values ('superAdmin');
+insert Role(name) values ('normalUser'),
+insert Role(name) values ('manager');
 
 INSERT INTO Users ([name], [second_name], [phone], [password], [photo], [email], [role_id])
 VALUES ('John', 'Doe', 123456789, 'pass123', NULL, 'john@example.com', 1);
